@@ -1,0 +1,5 @@
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.5.0
+crawl4ai>=0.4.248
+playwright>=1.48.0

@@ -1,0 +1,28 @@
+# Environment variables — chứa API keys, secrets
+.env
+discord-bot/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node.js
+node_modules/
+
+# Docker volumes & data
+n8n-data/
+n8n-data.zip
+redis-data/
+redis2-data/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
