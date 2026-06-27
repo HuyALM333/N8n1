@@ -4,18 +4,19 @@ services:
     ports:
       - "5678:5678"
     environment:
-      - N8N_HOST=209.97.165.66
-      - N8N_PROTOCOL=http
+      - N8N_HOST=slashed-spore-education.ngrok-free.dev
+      - N8N_PROTOCOL=https
       - N8N_PORT=5678
-      - WEBHOOK_URL=http://209.97.165.66:5678/
+      - WEBHOOK_URL=https://slashed-spore-education.ngrok-free.dev/
       - GENERIC_TIMEZONE=Asia/Ho_Chi_Minh
       - N8N_SECURE_COOKIE=false
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=admin
       - N8N_BASIC_AUTH_PASSWORD=DoiMatKhauManh123
+      - N8N_PROXY_HOPS=1
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
     volumes:
-      - n8n-data:/home/node/.n8n
+      - ./n8n-data:/home/node/.n8n
     networks: 
       - bcts-network
     restart: unless-stopped
@@ -81,4 +82,3 @@ networks:
 volumes:
   redis-data:
   redis2-data:
-  n8n-data:
