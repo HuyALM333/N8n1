@@ -19,8 +19,11 @@ async function checkWebhookConnection() {
   console.log("URL:", webhookUrl);
 
   try {
-    // Gửi request HEAD hoặc GET để kiểm tra endpoint có tồn tại không
-    const response = await axios.get(webhookUrl, { timeout: 10000 });
+    // Gửi POST test để kiểm tra webhook
+    const response = await axios.post(webhookUrl, {
+      test: true,
+      timestamp: new Date().toISOString()
+    }, { timeout: 10000 });
     console.log(`✅ Webhook n8n hoạt động (status: ${response.status})`);
   } catch (err) {
     if (err.response) {
